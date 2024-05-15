@@ -11,6 +11,8 @@ source:
 
 build:
   number: 0
+  # cvxopt not available for s390x and win
+  skip: true  # [s390x or win]
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
