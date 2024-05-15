@@ -42,10 +42,16 @@ requirements:
 test:
   imports:
     - pm4py
-  commands:
-    - pip check
   requires:
     - pip
+    - pytest
+  source_files:
+    - tests
+  commands:
+    - pip check
+    - cd tests
+    # as suggested in tests/README.txt
+    - python execute_tests.py
 
 about:
   home: https://pm4py.fit.fraunhofer.de
